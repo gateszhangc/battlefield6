@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: battlefield6
   annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    cert-manager.io/issue-temporary-certificate: "true"
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   ingressClassName: nginx
@@ -27,13 +29,15 @@ kind: Ingress
 metadata:
   name: battlefield6-www-redirect
   annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    cert-manager.io/issue-temporary-certificate: "true"
     nginx.ingress.kubernetes.io/permanent-redirect: https://battlefield6.lol
     nginx.ingress.kubernetes.io/permanent-redirect-code: "308"
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   ingressClassName: nginx
   tls:
-    - secretName: battlefield6-live-tls
+    - secretName: battlefield6-www-tls
       hosts:
         - www.battlefield6.lol
   rules:
