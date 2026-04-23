@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: battlefield6-live-tls
+spec:
+  secretName: battlefield6-live-tls
+  issuerRef:
+    kind: Issuer
+    name: battlefield6-cloudflare
+  dnsNames:
+    - battlefield6.lol
+    - www.battlefield6.lol

@@ -6,6 +6,10 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   ingressClassName: nginx
+  tls:
+    - secretName: battlefield6-live-tls
+      hosts:
+        - battlefield6.lol
   rules:
     - host: battlefield6.lol
       http:
@@ -28,6 +32,10 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   ingressClassName: nginx
+  tls:
+    - secretName: battlefield6-live-tls
+      hosts:
+        - www.battlefield6.lol
   rules:
     - host: www.battlefield6.lol
       http:

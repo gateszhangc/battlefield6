@@ -6,6 +6,8 @@ namespace: battlefield6
 resources:
   - ../../base
   - ingress.yaml
+  - issuer-cloudflare.yaml
+  - certificate.yaml
 
 labels:
   - pairs:
