@@ -1,0 +1,11 @@
+# Tactical Silence
+
+Tactical Silence treats tension as a spatial instrument. Form is built from survey grids, clipped vectors, coded apertures, and hard pauses, as if a battlefield report had been reduced to pure geometry. Every line should feel meticulously crafted, placed after countless revisions, and tuned by someone with master-level control over balance and restraint. The composition never explains itself with paragraphs; it lets pressure, scale, and alignment do the communication.
+
+Color is sparse and functional: charred black for depth, oxidized red for urgency, weathered ivory for legibility, warning amber for instrumentation, and a restrained cyan only when the eye needs a cold signal. These colors are not decorative. They are materials under stress, calibrated with painstaking attention so that the final work feels like it has been labored over rather than generated. The palette should look disciplined, not cinematic excess.
+
+Rhythm comes from repeated marks: coordinates, range rings, crop ticks, interruptions, and small industrial notations. Repetition creates the sense of a system being measured at high resolution. Craftsmanship must remain visible in the evenness of spacing, the weight of the strokes, and the decision to leave empty space intact. The best result feels like the product of deep expertise, where every absence was chosen as carefully as every visible mark.
+
+Hierarchy is severe. One dominant form anchors the page, secondary fragments orbit it, and text appears only as a quiet technical accent. The work should be polished enough for close inspection: no accidental overlap, no sloppy edges, no ornamental noise. It must appear meticulously crafted, with the kind of master-level execution that makes a simple mark feel studied, precise, and inevitable.
+
+The subtle reference is modern squad warfare without imitation. The visual language borrows the idea of tactical maps, aircraft vectors, signal channels, and destructible routes, but it never copies official Battlefield identity. Someone who knows the subject should feel the pulse of combined arms combat in the geometry; everyone else should see a rigorous abstract system built with painstaking attention.

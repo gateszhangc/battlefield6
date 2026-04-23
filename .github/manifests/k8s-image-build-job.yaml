@@ -1,0 +1,61 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{JOB_NAME}}
+  namespace: {{BUILD_NAMESPACE}}
+  labels:
+    app.kubernetes.io/name: {{APP_NAME}}
+    app.kubernetes.io/component: image-build
+spec:
+  backoffLimit: 0
+  ttlSecondsAfterFinished: {{K8S_JOB_TTL_SECONDS}}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{APP_NAME}}
+        app.kubernetes.io/component: image-build
+    spec:
+      restartPolicy: Never
+      serviceAccountName: {{K8S_BUILD_SERVICE_ACCOUNT}}
+      volumes:
+        - name: workspace
+          emptyDir: {}
+        - name: docker-config
+          secret:
+            secretName: {{K8S_DOCKER_CONFIG_SECRET}}
+            items:
+              - key: .dockerconfigjson
+                path: config.json
+      initContainers:
+        - name: fetch-source
+          image: alpine:3.21
+          command:
+            - /bin/sh
+            - -c
+          args:
+            - |
+              set -eu
+              apk add --no-cache curl tar >/dev/null
+              curl -fsSL "https://github.com/{{GITHUB_REPOSITORY}}/archive/{{GITHUB_SHA}}.tar.gz" -o /workspace/src.tar.gz
+              tar -xzf /workspace/src.tar.gz -C /workspace --strip-components=1
+              rm /workspace/src.tar.gz
+          volumeMounts:
+            - name: workspace
+              mountPath: /workspace
+      containers:
+        - name: kaniko
+          image: gcr.io/kaniko-project/executor:v1.23.2
+          args:
+            - --context=dir:///workspace
+            - --dockerfile=/workspace/{{DOCKERFILE_PATH}}
+            - --destination={{IMAGE_NAME}}:{{IMAGE_TAG}}
+            - --cache=true
+            - --cache-repo={{CACHE_REPO}}
+            - --snapshot-mode=redo
+            - --use-new-run
+          volumeMounts:
+            - name: workspace
+              mountPath: /workspace
+            - name: docker-config
+              mountPath: /kaniko/.docker
+              readOnly: true

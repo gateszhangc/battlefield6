@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: battlefield6
+  namespace: argocd
+spec:
+  description: Battlefield 6 site managed from the application repository
+  sourceRepos:
+    - https://github.com/gateszhangc/battlefield6.git
+  destinations:
+    - namespace: battlefield6
+      server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+    - group: "*"
+      kind: "*"
+  namespaceResourceWhitelist:
+    - group: "*"
+      kind: "*"

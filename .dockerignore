@@ -1,10 +1,11 @@
 .git
 .github
+brand
+deploy
+docs
 node_modules
 playwright-report
-test-results
 tasks
-brand
-scripts
+test-results
 tests
 npm-debug.log*

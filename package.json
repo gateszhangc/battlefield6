@@ -1,14 +1,14 @@
 {
-  "name": "artemis-2-wallpaper",
+  "name": "battlefield6-static-guide",
   "version": "1.0.0",
   "private": true,
-  "description": "Static Artemis II wallpaper site built from publicly released NASA imagery.",
+  "description": "Static Battlefield 6 guide site.",
   "scripts": {
-    "start": "node server.js",
-    "test": "playwright test",
+    "serve": "node server.js",
+    "test": "npm run test:browser",
     "test:browser": "playwright test"
   },
   "devDependencies": {
-    "@playwright/test": "^1.54.2"
+    "@playwright/test": "^1.52.0"
   }
 }

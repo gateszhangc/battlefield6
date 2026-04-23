@@ -1,21 +1,22 @@
 {
-  "name": "Artemis II Wallpaper",
-  "short_name": "Artemis II",
-  "description": "Independent editorial collection of Artemis II wallpapers using publicly released NASA imagery with source credit.",
+  "name": "Battlefield 6 Guide",
+  "short_name": "BF6 Guide",
+  "description": "A fast unofficial reference for Battlefield 6 release date, platforms, modes, PC specs, and official links.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#050912",
-  "theme_color": "#050912",
+  "background_color": "#080806",
+  "theme_color": "#11110f",
   "icons": [
     {
       "src": "/assets/brand/favicon.png",
-      "sizes": "256x256",
+      "sizes": "512x512",
       "type": "image/png"
     },
     {
       "src": "/assets/brand/apple-touch-icon.png",
       "sizes": "180x180",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }
