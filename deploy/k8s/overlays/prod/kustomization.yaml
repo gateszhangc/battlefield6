@@ -15,4 +15,4 @@ labels:
 images:
   - name: battlefield6
     newName: registry.144.91.77.245.sslip.io/battlefield6
-    newTag: bootstrap
+    newTag: 85ab488d3d29c8ee18e58d71c4dc1412ea663805
