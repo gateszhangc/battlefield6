@@ -33,7 +33,7 @@ metadata:
     acme.cert-manager.io/http01-edit-in-place: "true"
     cert-manager.io/cluster-issuer: letsencrypt-prod
     cert-manager.io/issue-temporary-certificate: "true"
-    nginx.ingress.kubernetes.io/permanent-redirect: https://battlefield6.lol$request_uri
+    nginx.ingress.kubernetes.io/permanent-redirect: https://battlefield6.lol
     nginx.ingress.kubernetes.io/permanent-redirect-code: "308"
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
 spec:
